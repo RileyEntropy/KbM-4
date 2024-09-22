@@ -1,0 +1,25 @@
+GPIO1 BAT_ADC
+GPIO4 LCD_DC
+GPIO5 LCD_CS
+GPIO6 LCD_SCL
+GPIO7 LCD_SDA
+GPIO8 LCD_RST
+GPIO10 SCL  
+GPIO11 SDA
+GPIO13 Touch_RST
+GPIO14 Touch_INT
+GPIO15 LCD_BL
+GPIO19 USB_N
+
+CST816S Touch Screen
+ST7789V2 TFT LCD Driver
+QMI8658C IMU
+
+ETA6089 Charging 
+PCF85063 RTC
+
+https://www.waveshare.com/wiki/ESP32-S3-Touch-LCD-1.69
+I2C Address:
+The default 7-bit I2C address for the CST816S is 0x15.
+Write address: 0x2A
+Read address: 0x2B
