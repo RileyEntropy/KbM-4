@@ -1,0 +1,13 @@
+#include <TFT_eSPI.h>
+#include <BleMouse.h>
+#include <Wire.h>
+
+#define SCREEN_WIDTH 320  // Adjust for landscape
+#define SCREEN_HEIGHT 240 // Adjust for landscape
+
+#define TOUCH_SDA 11
+#define TOUCH_SCL 10
+#define TOUCH_INT 14
+#define TOUCH_RST 13
+
+#define TOUCH_ADDR 0x15  // I2C address of CST816S
