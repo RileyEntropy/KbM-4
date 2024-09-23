@@ -1,1 +1,64 @@
+KbM-4 primary goal: Intuitive for shooters. Promote and reinforce the following:
+  Safety: admin tasks and menu pauses are conducted using selector switch
+  Proper Stance: thin film capacitive touch sensor on buttstock for cheekweld activated ADS
+    Secondary ADS CTS is avalible for "gamer mode"
+  Grip: Maintain a firm, consistent grip on the rifle with your dominant hand.
+  Shoulder Position: optional buttstock pressure switch to ensure stock is being propperly shouldered during "veteran mode"
+  Trigger Control: ADS can be activated without finder on trigger. Pulling the trigger in panic response will result in hipfire and/or quickfire (ads/fire)
+  Follow-Through: IMU control of fine aiming
+  Reloading: "gamer mode" mag button reloading. 
+  "Veteran Mode" reload requires mag release press> magazine baseplate press> bolt release press or charging handle pull
+  Malfunction Drills: "Veteran Mode" possibly integrate randomized malfuction after programmable ammount of rounds
+    Chamber display will read 
+        "FTFeed (FAILURE TO FEED MALFUCNTION): Tap, Rack, Bang"
+        "FTEjec (FAILURE TO EJECT MALFUNCTION), clear obstruction and continue firing" with a simple visual
+        "DoubleFeed: Lock Bolt, eject mag, rack bolt (x3), tap, rack, bang" 
+            while the actual process would be to insert mag instead of tap, it will be simplified to this since the input is the same
+        "FTExtract Simp (FAILURE TO EXTRACT MALFUNCTION):
+        ???"FTExtract Adv  pretty much disables the weapon until cleaning rod can be shoved into barrel
+        ???"SQUIB: FYL" pretty much disables the weapon until cleaning rod can be shoved into barrel
+???= might be going to far. Or perhaps not far enough...
 
+
+Sencondary Goal: Performance. Attempt to reach optical mouse level of aiming performance
+  using a combonation of novel solutions such as IMU, and TFT LCD emulating joystick, or trackball or combonation.
+
+Fine Motor Skills:
+  Trigger Control: Squeezing the trigger smoothly without disturbing aim.
+  Adjusting Sights: Making small, precise adjustments to iron sights or optics.
+  Magazine Release: Pressing the magazine release button to drop a mag.
+  Reloading: Inserting a fresh magazine into the magwell with precision.
+  Safety Manipulation: Flipping the safety on/off with the thumb or finger.
+  Adjusting Grips or Attachments: Making small adjustments to rifle accessories like bipods, stocks, or grips.
+
+Gross Motor Skills:
+  Shouldering the Rifle: Bringing the rifle up to the shoulder.
+  Recoil Management: Controlling the body’s response to rifle recoil.
+  Aiming: Raising the rifle into position and aligning sights or optics.
+  Movement: Moving from cover to cover or changing positions with the rifle.
+  Weapon Transitions: Switching from rifle to sidearm or back.
+  Malfunction Clearing: Using larger movements to clear jams or fix misfires
+
+Shooting
+
+Moving
+
+Communication
+
+Administrative
+  Use sight adjustment encoders
+
+Added Realism Effects
+  Recoil Simulation
+  Light, Laser and NOD attachments
+    GPIO Expansions, modular
+  Flash Bang Simulation
+    use bright LED and buzzer in optic
+  Tactile Transducer for ultimate rumble?
+    Small, place in grips/cheekweld for best effect
+  Grenade Addon?
+    Momentary Pull ring switch while holding down spoon> select grenade
+    Release spoon> throw grenade
+    Attach to reel lanyard
+    
+  Sidearm Addon?
