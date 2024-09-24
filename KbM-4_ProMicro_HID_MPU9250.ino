@@ -7,13 +7,16 @@
 MPU9250 mpu;
 
 // Response Curve parameters
-#define RC_RATE_X 2.0f  // Range: 0.01-2.55 (for X-axis, vertical movement) default 2.0
-#define RC_RATE_Z 2.0f  // Range: 0.01-2.55 (for Z-axis, horizontal movement) default 2.0
+#define RC_RATE_X 1.8f  // Range: 0.01-2.55 (for X-axis, vertical movement) default 2.0
+#define RC_RATE_Z 1.8f  // Range: 0.01-2.55 (for Z-axis, horizontal movement) default 2.0
+#define RC_RATE_Y 1.8f  // Range: 0.01-2.55 (for Y-axis, horizontal movement) default 2.0
 #define RATE_X 0.8f     // Range: 0.0-1.0 (for X-axis, vertical movement) default 0.8
 #define RATE_Z 0.8f     // Range: 0.0-1.0 (for Z-axis, horizontal movement) default 0.8
+#define RATE_Y 0.8f     // Range: 0.0-1.0 (for Y-axis, horizontal movement) default 0.8
 #define EXPO_X 0.5f     // Range: 0.0-1.0 (for X-axis, vertical movement) default 0.5
 #define EXPO_Z 0.5f     // Range: 0.0-1.0 (for Z-axis, horizontal movement) default 0.5
-#define MASTER_MULTIPLIER 2.5f // Range: 0.1-5.0, (Final multiplier applied to cursor movement) default 2.5
+#define EXPO_Y 0.5f     // Range: 0.0-1.0 (for Y-axis, horizontal movement) default 0.5
+#define MASTER_MULTIPLIER 2.0f // Range: 0.1-5.0, (Final multiplier applied to cursor movement) default 2.5
 
 // Other customizable parameters
 #define MAX_DELTA 1000.0f          // Range: 100-5000, Maximum cursor movement per update
@@ -21,10 +24,11 @@ MPU9250 mpu;
 #define SMOOTHING_FACTOR 0.7f      // Range: 0.0-1.0, Higher values make movement smoother but less responsive
 #define DRIFT_THRESHOLD 0.1f       // Range: 0.01-1.0, Minimum movement to register (reduces unintended movement)
 #define RATE_MULTIPLIER_FACTOR 0.5f // Range: 0.1-2.0, Impact of Y-axis on sensitivity
+#define Y_CONTRIBUTION 0.5f        // Range: 0.0-1.0, Contribution of Y-axis to horizontal movement
 
 // New options for inverting joystick axes
 #define INVERT_WS 0  // Set to 1 to invert W and S keys, 0 for normal operation
-#define INVERT_AD 0  // Set to 1 to invert A and D keys, 0 for normal operation
+#define INVERT_AD 1  // Set to 1 to invert A and D keys, 0 for normal operation
 
 //Pro Micro Pinout
 //------------------------------- EDGE OF BOARD ----------------- VCC SIDE
@@ -55,7 +59,7 @@ const int LED_PIN = 13; //Onboard LED
 const int JS_THRESHOLD = 100;
 
 float baselineX, baselineY, baselineZ;
-float smoothedDeltaX = 0, smoothedDeltaZ = 0;
+float smoothedDeltaX = 0, smoothedDeltaY = 0, smoothedDeltaZ = 0;
 
 // Response Curve function
 float applyResponseCurve(float input, float rcRate, float rate, float expo) {
@@ -104,7 +108,7 @@ void loop() {
 
 void handleGyroMouse() {
     float gyroX = mpu.getGyroX();  // X-axis for vertical movement
-    float gyroY = mpu.getGyroY();  // Y-axis for rate multiplier
+    float gyroY = mpu.getGyroY();  // Y-axis for horizontal movement
     float gyroZ = mpu.getGyroZ();  // Z-axis for horizontal movement
 
     float deltaX = gyroX - baselineX;
@@ -113,6 +117,7 @@ void handleGyroMouse() {
 
     // Normalize gyro input to -1 to 1 range (assuming max gyro reading of 2000 deg/s)
     float normalizedX = constrain(deltaX / 2000.0f, -1.0f, 1.0f);
+    float normalizedY = constrain(deltaY / 2000.0f, -1.0f, 1.0f);
     float normalizedZ = constrain(deltaZ / 2000.0f, -1.0f, 1.0f);
 
     // Calculate rate multiplier based on Y-axis
@@ -120,26 +125,30 @@ void handleGyroMouse() {
 
     // Apply Response Curve
     float rateX = applyResponseCurve(normalizedX, RC_RATE_X, RATE_X, EXPO_X) * rateMultiplier;
+    float rateY = applyResponseCurve(normalizedY, RC_RATE_Y, RATE_Y, EXPO_Y) * rateMultiplier;
     float rateZ = applyResponseCurve(normalizedZ, RC_RATE_Z, RATE_Z, EXPO_Z) * rateMultiplier;
+
+    // Combine Y and Z for horizontal movement
+    float horizontalRate = rateZ * (1 - Y_CONTRIBUTION) + rateY * Y_CONTRIBUTION;
 
     // Scale the rates to mouse movement
     float scaledDeltaX = rateX * MAX_DELTA / 1000.0f;
-    float scaledDeltaZ = rateZ * MAX_DELTA / 1000.0f;
+    float scaledDeltaHorizontal = horizontalRate * MAX_DELTA / 1000.0f;
 
     // Apply smoothing
     smoothedDeltaX = SMOOTHING_FACTOR * scaledDeltaX + (1 - SMOOTHING_FACTOR) * smoothedDeltaX;
-    smoothedDeltaZ = SMOOTHING_FACTOR * scaledDeltaZ + (1 - SMOOTHING_FACTOR) * smoothedDeltaZ;
+    smoothedDeltaY = SMOOTHING_FACTOR * scaledDeltaHorizontal + (1 - SMOOTHING_FACTOR) * smoothedDeltaY;
 
     // Apply master multiplier
     smoothedDeltaX *= MASTER_MULTIPLIER;
-    smoothedDeltaZ *= MASTER_MULTIPLIER;
+    smoothedDeltaY *= MASTER_MULTIPLIER;
 
     // Move the mouse if above drift threshold
-    if (fabsf(smoothedDeltaX) > DRIFT_THRESHOLD || fabsf(smoothedDeltaZ) > DRIFT_THRESHOLD) {
-        Mouse.move(-smoothedDeltaZ, smoothedDeltaX);  // Invert Z for horizontal, don't invert X for vertical
+    if (fabsf(smoothedDeltaX) > DRIFT_THRESHOLD || fabsf(smoothedDeltaY) > DRIFT_THRESHOLD) {
+        Mouse.move(-smoothedDeltaY, smoothedDeltaX);  // Invert horizontal for natural movement
     } else {
         smoothedDeltaX = 0;
-        smoothedDeltaZ = 0;
+        smoothedDeltaY = 0;
     }
 }
 
@@ -243,7 +252,7 @@ void calibrateBaseline() {
         delay(1);
     }
 
-    baselineX = sumX / numSamples;
+    baselineX = sumX / numSamples;r
     baselineY = sumY / numSamples;
     baselineZ = sumZ / numSamples;
 
