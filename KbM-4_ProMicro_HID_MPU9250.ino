@@ -103,11 +103,82 @@ void loop() {
 }
 
 void handleGyroMouse() {
-    // ... (keep this function unchanged)
+    float gyroX = mpu.getGyroX();  // X-axis for vertical movement
+    float gyroY = mpu.getGyroY();  // Y-axis for rate multiplier
+    float gyroZ = mpu.getGyroZ();  // Z-axis for horizontal movement
+
+    float deltaX = gyroX - baselineX;
+    float deltaY = gyroY - baselineY;
+    float deltaZ = gyroZ - baselineZ;
+
+    // Normalize gyro input to -1 to 1 range (assuming max gyro reading of 2000 deg/s)
+    float normalizedX = constrain(deltaX / 2000.0f, -1.0f, 1.0f);
+    float normalizedZ = constrain(deltaZ / 2000.0f, -1.0f, 1.0f);
+
+    // Calculate rate multiplier based on Y-axis
+    float rateMultiplier = 1.0f + (fabsf(deltaY) / 2000.0f) * RATE_MULTIPLIER_FACTOR;
+
+    // Apply Response Curve
+    float rateX = applyResponseCurve(normalizedX, RC_RATE_X, RATE_X, EXPO_X) * rateMultiplier;
+    float rateZ = applyResponseCurve(normalizedZ, RC_RATE_Z, RATE_Z, EXPO_Z) * rateMultiplier;
+
+    // Scale the rates to mouse movement
+    float scaledDeltaX = rateX * MAX_DELTA / 1000.0f;
+    float scaledDeltaZ = rateZ * MAX_DELTA / 1000.0f;
+
+    // Apply smoothing
+    smoothedDeltaX = SMOOTHING_FACTOR * scaledDeltaX + (1 - SMOOTHING_FACTOR) * smoothedDeltaX;
+    smoothedDeltaZ = SMOOTHING_FACTOR * scaledDeltaZ + (1 - SMOOTHING_FACTOR) * smoothedDeltaZ;
+
+    // Apply master multiplier
+    smoothedDeltaX *= MASTER_MULTIPLIER;
+    smoothedDeltaZ *= MASTER_MULTIPLIER;
+
+    // Move the mouse if above drift threshold
+    if (fabsf(smoothedDeltaX) > DRIFT_THRESHOLD || fabsf(smoothedDeltaZ) > DRIFT_THRESHOLD) {
+        Mouse.move(-smoothedDeltaZ, smoothedDeltaX);  // Invert Z for horizontal, don't invert X for vertical
+    } else {
+        smoothedDeltaX = 0;
+        smoothedDeltaZ = 0;
+    }
 }
 
 void handleKeyboardInputs() {
-    // ... (keep this function unchanged)
+    if (digitalRead(SW1_10) == LOW) {
+        Mouse.press(MOUSE_MIDDLE);  // Middle Mouse Button
+    } else {
+        Mouse.release(MOUSE_MIDDLE);
+    }
+
+    if (digitalRead(SW2_16) == LOW) {
+        Keyboard.press(KEY_SPACE);  // Spacebar
+    } else {
+        Keyboard.release(KEY_SPACE);
+    }
+
+    if (digitalRead(MAG_RELEASE) == LOW) {
+        Keyboard.press('r');  // 'r' keypress
+    } else {
+        Keyboard.release('r');
+    }
+
+    if (digitalRead(TRIGGER) == LOW) {
+        Mouse.press(MOUSE_LEFT);  // Left Mouse Button
+    } else {
+        Mouse.release(MOUSE_LEFT);
+    }
+
+    if (digitalRead(PLUG_5P_1) == LOW) {
+        Keyboard.press(KEY_LEFT_SHIFT);  // Shift keypress
+    } else {
+        Keyboard.release(KEY_LEFT_SHIFT);
+    }
+
+    if (digitalRead(JS_B_PIN) == LOW) {
+        Keyboard.press(KEY_LEFT_CTRL);  // Ctrl keypress
+    } else {
+        Keyboard.release(KEY_LEFT_CTRL);
+    }
 }
 
 void handleJoystick() {
@@ -160,5 +231,26 @@ void handleJoystick() {
 }
 
 void calibrateBaseline() {
-    // ... (keep this function unchanged)
+    const int numSamples = 1000;
+    float sumX = 0, sumY = 0, sumZ = 0;
+
+    for (int i = 0; i < numSamples; i++) {
+        if (mpu.update()) {
+            sumX += mpu.getGyroX();
+            sumY += mpu.getGyroY();
+            sumZ += mpu.getGyroZ();
+        }
+        delay(1);
+    }
+
+    baselineX = sumX / numSamples;
+    baselineY = sumY / numSamples;
+    baselineZ = sumZ / numSamples;
+
+    Serial.print("Baseline calibrated: X=");
+    Serial.print(baselineX, 2);
+    Serial.print(", Y=");
+    Serial.print(baselineY, 2);
+    Serial.print(", Z=");
+    Serial.println(baselineZ, 2);
 }
