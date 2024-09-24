@@ -7,13 +7,13 @@
 MPU9250 mpu;
 
 // Response Curve parameters
-#define RC_RATE_X 2.0f  // Range: 0.01-2.55 (for X-axis, vertical movement)
-#define RC_RATE_Z 2.0f  // Range: 0.01-2.55 (for Z-axis, horizontal movement)
-#define RATE_X 0.8f     // Range: 0.0-1.0 (for X-axis, vertical movement)
-#define RATE_Z 0.8f     // Range: 0.0-1.0 (for Z-axis, horizontal movement)
-#define EXPO_X 0.5f     // Range: 0.0-1.0 (for X-axis, vertical movement)
-#define EXPO_Z 0.5f     // Range: 0.0-1.0 (for Z-axis, horizontal movement)
-#define MASTER_MULTIPLIER 2.5f // Range: 0.1-5.0, Final multiplier applied to cursor movement
+#define RC_RATE_X 2.0f  // Range: 0.01-2.55 (for X-axis, vertical movement) default 2.0
+#define RC_RATE_Z 2.0f  // Range: 0.01-2.55 (for Z-axis, horizontal movement) defualt 2.0
+#define RATE_X 0.8f     // Range: 0.0-1.0 (for X-axis, vertical movement) default 0.8
+#define RATE_Z 0.8f     // Range: 0.0-1.0 (for Z-axis, horizontal movement) default 0.8
+#define EXPO_X 0.5f     // Range: 0.0-1.0 (for X-axis, vertical movement) default 0.5
+#define EXPO_Z 0.5f     // Range: 0.0-1.0 (for Z-axis, horizontal movement) default 0.5
+#define MASTER_MULTIPLIER 2.5f // Range: 0.1-5.0, (Final multiplier applied to cursor movement) default 2.5
 
 // Other customizable parameters
 #define MAX_DELTA 1000.0f          // Range: 100-5000, Maximum cursor movement per update
