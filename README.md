@@ -4,4 +4,4 @@ Add discription
 add features
 add parts list
 add parts comatibility
-![KbM-PCC v16](https://github.com/user-attachments/assets/f0ed91fc-72ec-4139-9458-fa1e61e55d13)
+![KbM-PCCv433443](https://github.com/user-attachments/assets/34bc65c5-8de1-45f4-876d-6c6494b32a2d)
