@@ -24,6 +24,11 @@ https://a.co/d/78XaSLT
 
 ![612L5qs+4xL _SL1500_](https://github.com/user-attachments/assets/bd297e81-d4bf-4e4c-bcbd-33c29e65cbbc)
 
+Kailh Hot-swap PCB Socket CPG151101S11
+https://a.co/d/eFxBCiE
+
+![71HhVmByGHL _AC_SL1500_](https://github.com/user-attachments/assets/5c50026e-387a-4387-b186-06b04ec8e7b6)
+
 Kailh GM8.0 Micro Switch (UNTESTED, NEEDS PARTS DESIGN)
 https://a.co/d/g16Y8mO
 
