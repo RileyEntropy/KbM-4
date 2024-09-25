@@ -6,6 +6,14 @@ add parts list
 add parts comatibility
 
 ![KbM-PCCv433443](https://github.com/user-attachments/assets/34bc65c5-8de1-45f4-876d-6c6494b32a2d)
+![KbM-PCC v19](https://github.com/user-attachments/assets/7502686d-dec9-4849-b173-c402479f51a9)
+![KbM-PCC v192](https://github.com/user-attachments/assets/b215e9c1-c8ad-4cb6-95c8-6f801adbf45d)
+
+ESP-32-S3 Dev Kit
+https://a.co/d/4kGZ8nL
+
+![R (5)](https://github.com/user-attachments/assets/2864237d-043f-48c7-a45a-ef3ba21ce350)
+
 
 Thin Film Pressure Sensor Strip
 https://a.co/d/13WvZUT
