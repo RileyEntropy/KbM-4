@@ -1,5 +1,8 @@
 # KbM-4
-Add discription 
+The KbM-4 (KeyBoard/Mouse- M4) is a highly modular, highy configurable and highly upgradable controller based on the AR-15 platform. It is compatible with many AR accessories and attachments such as optics, stocks, grips, etc. It also utilizes common custom keyboard and mouse switches, such as Kailh Choc V2s, and GM8.0 switches, but can be replaced with any switch of a similar footprint. 
+Performance wise, the goal is to match the aiming capability of optical gaming mice
+
+
 add features
 add parts list
 add parts comatibility
