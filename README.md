@@ -7,6 +7,8 @@ add parts comatibility
 ![KbM-PCCv433443](https://github.com/user-attachments/assets/34bc65c5-8de1-45f4-876d-6c6494b32a2d)
 ![KbM-PCC v19](https://github.com/user-attachments/assets/7502686d-dec9-4849-b173-c402479f51a9)
 ![KbM-PCC v192](https://github.com/user-attachments/assets/b215e9c1-c8ad-4cb6-95c8-6f801adbf45d)
+![Screenshot 2024-09-27 144149](https://github.com/user-attachments/assets/c6710a22-6b89-464d-8bdf-e41195aa0227)
+![Screenshot 2024-09-27 144138](https://github.com/user-attachments/assets/88090bb4-260a-4af3-81f8-db22db2a80d3)
 
 ESP-32-S3 Dev Kit (UNTESTED HID MCU)
 https://a.co/d/4kGZ8nL
