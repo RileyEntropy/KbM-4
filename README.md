@@ -1,6 +1,7 @@
 # KbM-4
 The KbM-4 (KeyBoard/Mouse- M4) is a highly modular, highy configurable and highly upgradable controller based on the AR-15 platform. It is compatible with many AR accessories and attachments such as optics, stocks, grips, etc. It also utilizes common custom keyboard and mouse switches, such as Kailh Choc V2s, and GM8.0 switches, but can be replaced with any switch of a similar footprint. 
-Performance wise, the goal is to match the aiming capability of optical gaming mice
+Performance wise, the goal is to match the gold standard of the aiming capability of optical gaming mice. To acomplish this, one or more IMU's are used for gyro control, which is nothing new as many gaming controllers now feature gyro aiming. I have tested FPV gimbals, analog joysticks, trackpads, and even drawing tablets in persuit of a propper match for IMU aiming.
+Realistic and intuitive
 
 
 add features
