@@ -32,6 +32,7 @@ WebUI Configurator Example
 ![Screenshot 2024-09-27 144149](https://github.com/user-attachments/assets/c6710a22-6b89-464d-8bdf-e41195aa0227)
 ![Screenshot 2024-09-27 144138](https://github.com/user-attachments/assets/88090bb4-260a-4af3-81f8-db22db2a80d3)
 
+Time for 4am ramblings:
 But why tho?
 Sim racing rigs have steering wheels, flight sim rigs have throttle and stick, but shooter games? I would say at best the options, when available, are limited, overpriced and feel like big box store toy guns. What if there was a controller, built by shooters, for shooters? Not just in FPS games, but people with real time behind the rifle. A controller worthy of Chris Costa, Travis Haley, and Papa Thumb. A controller where you can smoke some kids online after a long range session and have some of that muscle memory actually transfer back and forth? 
 
