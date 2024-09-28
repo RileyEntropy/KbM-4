@@ -53,6 +53,10 @@ https://a.co/d/4kGZ8nL
 
 ![R (5)](https://github.com/user-attachments/assets/2864237d-043f-48c7-a45a-ef3ba21ce350)
 
+![80d21868184b4678d52fb7005db5317ee075ab77](https://github.com/user-attachments/assets/474f419e-a822-45d9-9ca5-12ba9c21a866)
+![OIP (5)](https://github.com/user-attachments/assets/60c41aa9-2a9f-48a2-979b-5abcffac2c84)
+
+
 Pro Micro Board ATmega32U4 Leonardo 5V/16MHz Module Board Type C (ALTERNATE HID MCU)
 https://a.co/d/3GjWkje
 
@@ -62,6 +66,7 @@ Kailh Choc V2 Low Profile Switch Blue Clicky, 4-Pin 50gf RGB SMD Gaming Mechanic
 https://a.co/d/78XaSLT
 
 ![612L5qs+4xL _SL1500_](https://github.com/user-attachments/assets/bd297e81-d4bf-4e4c-bcbd-33c29e65cbbc)
+![202004151351066711915064c54f7d9dba66f572e3baff](https://github.com/user-attachments/assets/f425ae15-a0d9-4d53-a941-89cb40b58a53)
 
 Kailh Hot-swap PCB Socket CPG151101S11
 https://a.co/d/eFxBCiE
@@ -72,6 +77,7 @@ Kailh GM8.0 Micro Switch (UNTESTED, NEEDS PARTS DESIGN)
 https://a.co/d/g16Y8mO
 
 ![61dG6Rh-S3L _AC_SL1500_](https://github.com/user-attachments/assets/2622c3d3-63d9-4ad9-b472-2d5af0ef5377)
+![GM-8 0-BLACK-MAMBA-Switch-dimension](https://github.com/user-attachments/assets/14d36f32-ef45-4fcb-9441-894b98ab41f6)
 
 GY-MPU9250 9 Axis Gyroscope/Magnetometer (TESTED, WORKING. INTEGRATE MAG)
 https://a.co/d/3rONOaM
@@ -82,6 +88,7 @@ https://a.co/d/3rONOaM
 https://a.co/d/gq9IQqk
 
 ![61nDSCEeuxL _AC_SL200_](https://github.com/user-attachments/assets/221c83db-4ba1-4406-b032-a0d91cfa81c0)
+![201903121040238222735](https://github.com/user-attachments/assets/8f91e286-f98c-4e87-8ef3-dc67f7848413)
 
 PSP 1000 Replacment Analog Joystick (UNTESTED, NEED CAD AND PARTS DESIGN)
 https://a.co/d/bAqEFN5
@@ -90,11 +97,13 @@ https://a.co/d/bAqEFN5
 ![IMG_0681-2](https://github.com/user-attachments/assets/09190d37-3962-405c-860a-a4e1473c717b)
 
 
-
 10x10x9mm 6 Pin 5 Way Momentary SMT Tactile Switch
 https://a.co/d/gYcASHC
 
 ![31OAXA+rCgL _AC_](https://github.com/user-attachments/assets/7c50d6ed-7385-4c55-b4cd-bf645dbbfe23)
+![raspberry_pi_5way-schematic](https://github.com/user-attachments/assets/6f133512-cb0a-475a-823d-e3cd39a87f00)
+![a4ffbdc67daf6e641a9c50c5940088a4142fa074](https://github.com/user-attachments/assets/1cdb554c-0504-42f7-8447-ad9f568c7df3)
+
 
 Thin Film Capacitive Pressure Sensor
 https://a.co/d/25u2H3w
