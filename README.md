@@ -87,6 +87,9 @@ PSP 1000 Replacment Analog Joystick (UNTESTED, NEED CAD AND PARTS DESIGN)
 https://a.co/d/bAqEFN5
 
 ![61yaEL76dML _AC_SL1500_](https://github.com/user-attachments/assets/eabf3b32-2ad7-4e88-97eb-fad86f1760d5)
+![IMG_0681-2](https://github.com/user-attachments/assets/09190d37-3962-405c-860a-a4e1473c717b)
+
+
 
 10x10x9mm 6 Pin 5 Way Momentary SMT Tactile Switch
 https://a.co/d/gYcASHC
