@@ -1,23 +1,6 @@
 # KbM-4
 The KbM-4 (KeyBoard/Mouse- M4) is a highly modular, highly configurable and highly upgradable controller based on the AR-15 platform. It is compatible with many AR accessories and attachments such as optics, stocks, grips, etc. It also utilizes common custom keyboard and mouse switches, such as Kailh Choc V2s, and GM8.0 switches, but can be replaced with any switch of a similar footprint. 
 
-But why tho?
-Sim racing rigs have steering wheels, flight sim rigs have throttle and stick, but shooter games? I would say at best the options, when available, are limited, overpriced and feel like big box store toy guns. What if there was a controller, built by shooters, for shooters? Not just in FPS games, but people with real time behind the rifle. A controller worthy of Chris Costa, Travis Haley, and Papa Thumb. A controller where you can smoke some kids online after a long range session and have some of that muscle memory actually transfer back and forth? 
-
-Maybe it’s just me, but the first time I reloaded in a PC shooter game, using the actual magazine release button on my controller, with correct AR-15 placement, it just hits different… 
-
-I did a deep dive of research into aiming mechanics and mouse ergonomics. The firearms industry has not only had the competitive incentive to make ergonomics and weapons handling both an art and science, but also the necessity of survival. Over the last two decades, the study of firearms manipulation has made great strides, but controllers and mice are the tactical equivalent of 80’s SWAT movies. 
-
-Availability: A platform, not a product
-Open source. Easy to build on your own. No kickstarter, no waitlist, no back order, no overhyped broken promises. Buy it or build it, and if there’s anything you don’t like about it, you can change it with pretty minimal effort. 
-
-Realism: in expectations
-I don’t think the KbM-4 will revolutionize the gaming industry, or even be the right answer for most people. For those who want a more realistic shooting experience while still being able to keep up with optical mice, this might be a superior option. Of course everything has a learning curve, this is no exception. While it is built to be intuitive, it will take some getting used to. But once it clicks and you can get into the flow it feels right for those with time behind the trigger.
-
-
-Performance wise, the goal is to match the gold standard of the aiming capability of optical gaming mice. To accomplish this, one or more IMU's are used for gyro control, which is nothing new as many gaming controllers now feature gyro aiming. I have tested FPV gimbals, analog joysticks, trackpads, and even drawing tablets in pursuit of a proper match for IMU aiming.
-Realistic and intuitive
-
 AR-15 spec placement of fire controls
 AR-15 compatible buffer tube (Mil-Spec threading) and grip (M5 bolt)
 Full Upper Rail compatible with RIS accessories.
@@ -48,6 +31,22 @@ Open Source Hardware and Firmware for limitless customizations and modifications
 WebUI Configurator Example
 ![Screenshot 2024-09-27 144149](https://github.com/user-attachments/assets/c6710a22-6b89-464d-8bdf-e41195aa0227)
 ![Screenshot 2024-09-27 144138](https://github.com/user-attachments/assets/88090bb4-260a-4af3-81f8-db22db2a80d3)
+
+But why tho?
+Sim racing rigs have steering wheels, flight sim rigs have throttle and stick, but shooter games? I would say at best the options, when available, are limited, overpriced and feel like big box store toy guns. What if there was a controller, built by shooters, for shooters? Not just in FPS games, but people with real time behind the rifle. A controller worthy of Chris Costa, Travis Haley, and Papa Thumb. A controller where you can smoke some kids online after a long range session and have some of that muscle memory actually transfer back and forth? 
+
+Maybe it’s just me, but the first time I reloaded in a PC shooter game, using the actual magazine release button on my controller, with correct AR-15 placement, it just hits different… 
+
+I did a deep dive of research into aiming mechanics and mouse ergonomics. The firearms industry has not only had the competitive incentive to make ergonomics and weapons handling both an art and science, but also the necessity of survival. Over the last two decades, the study of firearms manipulation has made great strides, but controllers and mice are the tactical equivalent of 80’s SWAT movies. 
+
+Availability: A platform, not a product
+Open source. Easy to build on your own. No kickstarter, no waitlist, no back order, no overhyped broken promises. Buy it or build it, and if there’s anything you don’t like about it, you can change it with pretty minimal effort. 
+
+Realism: in expectations
+I don’t think the KbM-4 will revolutionize the gaming industry, or even be the right answer for most people. For those who want a more realistic shooting experience while still being able to keep up with optical mice, this might be a superior option. Of course everything has a learning curve, this is no exception. While it is built to be intuitive, it will take some getting used to. But once it clicks and you can get into the flow it feels right for those with time behind the trigger.
+
+Performance wise, the goal is to match the gold standard of the aiming capability of optical gaming mice. To accomplish this, one or more IMU's are used for gyro control, which is nothing new as many gaming controllers now feature gyro aiming. I have tested FPV gimbals, analog joysticks, trackpads, and even drawing tablets in pursuit of a proper match for IMU aiming.
+Realistic and intuitive
 
 ESP-32-S3 Dev Kit (UNTESTED HID MCU)
 https://a.co/d/4kGZ8nL
