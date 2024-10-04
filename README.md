@@ -57,6 +57,20 @@ https://a.co/d/4kGZ8nL
 ![80d21868184b4678d52fb7005db5317ee075ab77](https://github.com/user-attachments/assets/474f419e-a822-45d9-9ca5-12ba9c21a866)
 ![OIP (5)](https://github.com/user-attachments/assets/60c41aa9-2a9f-48a2-979b-5abcffac2c84)
 
+// Working COnfig to get USB HID and Serial Working
+//took 3 fucking days to figure out
+// USB CDC Enabled
+// USB DFU Disabled
+// JTAG USB DFU
+// USB MSC Disabled
+// Uploade UART
+// USB Mode OTG
+#include <Arduino.h>
+#include "USB.h"
+#include "USBHIDKeyboard.h"
+#include "USBHIDMouse.h"
+
+
 
 Pro Micro Board ATmega32U4 Leonardo 5V/16MHz Module Board Type C (ALTERNATE HID MCU)
 https://a.co/d/3GjWkje
