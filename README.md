@@ -94,7 +94,7 @@ https://a.co/d/g16Y8mO
 ![61dG6Rh-S3L _AC_SL1500_](https://github.com/user-attachments/assets/2622c3d3-63d9-4ad9-b472-2d5af0ef5377)
 ![GM-8 0-BLACK-MAMBA-Switch-dimension](https://github.com/user-attachments/assets/14d36f32-ef45-4fcb-9441-894b98ab41f6)
 
-GY-MPU9250 9 Axis Gyroscope/Magnetometer (TESTED, WORKING. INTEGRATE MAG)
+GY-MPU9250 9 Axis Gyroscope/Magnetometer (TESTED, WORKING. INTEGRATE MAG) VDD 2.4V to 3.6V
 https://a.co/d/3rONOaM
 
 ![51bMyPpej4L](https://github.com/user-attachments/assets/b244d416-54c5-4a9b-a65d-07f3e46f5b53)
@@ -105,7 +105,7 @@ https://a.co/d/gq9IQqk
 ![61nDSCEeuxL _AC_SL200_](https://github.com/user-attachments/assets/221c83db-4ba1-4406-b032-a0d91cfa81c0)
 ![201903121040238222735](https://github.com/user-attachments/assets/8f91e286-f98c-4e87-8ef3-dc67f7848413)
 
-PSP 1000 Replacment Analog Joystick (UNTESTED, NEED CAD AND PARTS DESIGN)
+PSP 1000 Replacment Analog Joystick (UNTESTED, NEED CAD AND PARTS DESIGN) 3.3v to 5v
 https://a.co/d/bAqEFN5
 
 ![61yaEL76dML _AC_SL1500_](https://github.com/user-attachments/assets/eabf3b32-2ad7-4e88-97eb-fad86f1760d5)
