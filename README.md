@@ -130,7 +130,7 @@ https://a.co/d/2LdUVgh
 
 ![61lx3oXyw9L _SL200_](https://github.com/user-attachments/assets/11227fcc-8df0-4109-ba00-54f3d92ca870)
 
-1.3 Inch I2C OLED Display Module 128x64 Pixel SH1106 Screen Module
+1.3 Inch I2C OLED Display Module 128x64 Pixel SH1106 Screen Module (3V~5V)
 https://a.co/d/2yZsSMA
 
 ![61i9iP73FmL _AC_SL1200_](https://github.com/user-attachments/assets/062c0c48-f493-4d27-bb19-4e2abdf85515)
@@ -141,7 +141,7 @@ https://a.co/d/4ZwDTRi
 
 ![61w4KYkAFdL _SL1000_](https://github.com/user-attachments/assets/b8593109-225b-4350-ac27-a07111813c07)
 
-Thin Film Pressure Sensor Strip
+Thin Film Pressure Sensor Strip  3.3-5V
 https://a.co/d/13WvZUT
 
 ![61tQLWFO8zL _SL200_](https://github.com/user-attachments/assets/ab1c51a3-e5e6-4910-99ae-2e8c501f3b59)
