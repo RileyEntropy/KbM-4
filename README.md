@@ -49,10 +49,7 @@ I don’t think the KbM-4 will revolutionize the gaming industry, or even be the
 Performance wise, the goal is to match the gold standard of the aiming capability of optical gaming mice. To accomplish this, one or more IMU's are used for gyro control, which is nothing new as many gaming controllers now feature gyro aiming. I have tested FPV gimbals, analog joysticks, trackpads, and even drawing tablets in pursuit of a proper match for IMU aiming.
 Realistic and intuitive
 
-ESP-32-S3 Dev Kit (UNTESTED HID MCU)
-https://a.co/d/4kGZ8nL
-
-![R (5)](https://github.com/user-attachments/assets/2864237d-043f-48c7-a45a-ef3ba21ce350)
+ESP-32-S3 Dev Kit
 
 ![80d21868184b4678d52fb7005db5317ee075ab77](https://github.com/user-attachments/assets/474f419e-a822-45d9-9ca5-12ba9c21a866)
 ![OIP (5)](https://github.com/user-attachments/assets/60c41aa9-2a9f-48a2-979b-5abcffac2c84)
@@ -69,13 +66,6 @@ https://a.co/d/4kGZ8nL
 #include "USB.h"
 #include "USBHIDKeyboard.h"
 #include "USBHIDMouse.h"
-
-
-
-Pro Micro Board ATmega32U4 Leonardo 5V/16MHz Module Board Type C (ALTERNATE HID MCU)
-https://a.co/d/3GjWkje
-
-![71PDKi3EgiL _AC_SL1500_](https://github.com/user-attachments/assets/d724f343-c59d-4d7f-8d5b-c001146a0ebc)
 
 Kailh Choc V2 Low Profile Switch Blue Clicky, 4-Pin 50gf RGB SMD Gaming Mechanical Keyboard Switch (RED TESTED)
 https://a.co/d/78XaSLT
