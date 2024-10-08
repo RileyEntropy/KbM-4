@@ -122,6 +122,13 @@ https://a.co/d/2LdUVgh
 
 1.3 Inch I2C OLED Display Module 128x64 Pixel SH1106 Screen Module (3V~5V)
 https://a.co/d/2yZsSMA
+#include <Arduino.h>
+#include <U8g2lib.h>
+#include <Wire.h>
+
+#define OLED_SDA_PIN 12
+#define OLED_SCL_PIN 13
+#define OLED_ADDRESS 0x3C
 
 ![61i9iP73FmL _AC_SL1200_](https://github.com/user-attachments/assets/062c0c48-f493-4d27-bb19-4e2abdf85515)
 
