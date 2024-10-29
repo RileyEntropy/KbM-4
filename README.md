@@ -24,10 +24,9 @@ Holographic or Ejection Port mounted OLED display
 
 Open Source Hardware and Firmware for limitless customizations and modifications for a fully open ecosystem. Possible QMK firmware planned in the future.
 
+![KbMPx v11345](https://github.com/user-attachments/assets/c664e908-ea09-498c-8d15-50025cf3fad6)
+![KbMPx v1134](https://github.com/user-attachments/assets/20b67eed-07ed-425b-8081-921cfcc6fdca)
 
-![KbM-PCCv433443](https://github.com/user-attachments/assets/34bc65c5-8de1-45f4-876d-6c6494b32a2d)
-![KbM-PCC v19](https://github.com/user-attachments/assets/7502686d-dec9-4849-b173-c402479f51a9)
-![KbM-PCC v192](https://github.com/user-attachments/assets/b215e9c1-c8ad-4cb6-95c8-6f801adbf45d)
 WebUI Configurator Example
 ![Screenshot 2024-09-27 144149](https://github.com/user-attachments/assets/c6710a22-6b89-464d-8bdf-e41195aa0227)
 ![Screenshot 2024-09-27 144138](https://github.com/user-attachments/assets/88090bb4-260a-4af3-81f8-db22db2a80d3)
