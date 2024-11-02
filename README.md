@@ -22,7 +22,10 @@ DPI and Gyro sensitivity adjustable via mechanical knobs on sights.
 Holographic or Ejection Port mounted OLED display
 
 
+
 Open Source Hardware and Firmware for limitless customizations and modifications for a fully open ecosystem. Possible QMK firmware planned in the future.
+![KbMPx v21 1](https://github.com/user-attachments/assets/8e4f258f-be59-4979-b7c2-9054f3af653d)
+![KbMPx v21](https://github.com/user-attachments/assets/a2594e8f-1f6e-4c10-bafa-147ca9359f00)
 ![KbMPx_2024-Nov-01_08-02-45PM-000_CustomizedView29259553379](https://github.com/user-attachments/assets/44f9d7b5-8dce-42a8-bb6f-506b6ca83ab1)
 ![KbMPx_2024-Nov-01_08-03-40PM-000_CustomizedView11831597286](https://github.com/user-attachments/assets/91813a00-2b95-46e7-8895-e0742da34def)
 ![KbMPx_2024-Nov-01_09-48-59AM-000_CustomizedView13123542985](https://github.com/user-attachments/assets/6311cddb-fd21-43ab-b087-781f9720c3d9)
