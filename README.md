@@ -119,17 +119,6 @@ https://a.co/d/gYcASHC
 ![raspberry_pi_5way-schematic](https://github.com/user-attachments/assets/6f133512-cb0a-475a-823d-e3cd39a87f00)
 ![a4ffbdc67daf6e641a9c50c5940088a4142fa074](https://github.com/user-attachments/assets/1cdb554c-0504-42f7-8447-ad9f568c7df3)
 
-
-Thin Film Capacitive Pressure Sensor
-https://a.co/d/25u2H3w
-
-![51NCF0LNl9L _SL1500_](https://github.com/user-attachments/assets/021fb3ac-19c7-4640-9cbc-5a0493f375bc)
-
-Blackberry Trackball Module
-https://a.co/d/2LdUVgh
-
-![61lx3oXyw9L _SL200_](https://github.com/user-attachments/assets/11227fcc-8df0-4109-ba00-54f3d92ca870)
-
 1.3 Inch I2C OLED Display Module 128x64 Pixel SH1106 Screen Module (3V~5V)
 https://a.co/d/2yZsSMA
 #include <Arduino.h>
@@ -147,9 +136,4 @@ TCA9548A I2C  8 Channel Multiplexer Expansion Breakout Board
 https://a.co/d/4ZwDTRi
 
 ![61w4KYkAFdL _SL1000_](https://github.com/user-attachments/assets/b8593109-225b-4350-ac27-a07111813c07)
-
-Thin Film Pressure Sensor Strip  3.3-5V
-https://a.co/d/13WvZUT
-
-![61tQLWFO8zL _SL200_](https://github.com/user-attachments/assets/ab1c51a3-e5e6-4910-99ae-2e8c501f3b59)
 
