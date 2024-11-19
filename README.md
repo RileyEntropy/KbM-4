@@ -29,6 +29,9 @@ Open Source Hardware and Firmware for limitless customizations and modifications
 ![KbMPx_2024-Nov-01_08-02-45PM-000_CustomizedView29259553379](https://github.com/user-attachments/assets/44f9d7b5-8dce-42a8-bb6f-506b6ca83ab1)
 ![KbMPx_2024-Nov-01_08-03-40PM-000_CustomizedView11831597286](https://github.com/user-attachments/assets/91813a00-2b95-46e7-8895-e0742da34def)
 ![KbMPx_2024-Nov-01_09-48-59AM-000_CustomizedView13123542985](https://github.com/user-attachments/assets/6311cddb-fd21-43ab-b087-781f9720c3d9)
+![KbMPx v42MARS](https://github.com/user-attachments/assets/c5686ca2-6ba8-45bf-8e1b-a2825d4c4c72)
+![KbMPx v42MARS2](https://github.com/user-attachments/assets/91e3b104-f358-44ab-955c-981d449c77c3)
+![KbMPx_2024-Nov-16_01-25-42AM-000_CustomizedView423223413](https://github.com/user-attachments/assets/ccf72de7-96e5-44d2-8568-612bd129ad49)
 ![KbMPx_2024-Nov-01_09-51-20AM-000_CustomizedView8402114409](https://github.com/user-attachments/assets/37a3a35e-4eed-4606-9141-38658e7802bc)
 
 
