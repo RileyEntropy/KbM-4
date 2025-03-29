@@ -1,8 +1,8 @@
 // KBM4 Expressif Firmware 0.0.1
 // by Riley Amber :)
+// Updated by Vance with gyro axis reassignment fix
 // Upload to ESP32S3 Supermini
 // Target ESP32S3 Dev Module
-//Gyro axis needs reassignment
 
 #include <Wire.h>
 #include "USB.h"
@@ -16,7 +16,6 @@ bool handleKeyboardInputs();
 void handleJoystickInputs();
 void handleIMUMovement();
 void calibrateBaseline();
-void handleGyroMouse();
 
 //=============================
 //          GPIO Default Pins
@@ -73,11 +72,11 @@ void handleGyroMouse();
 //=============================
 //     Gyro Custom Defines
 //=============================
-//Gyro Orientation
-#define Rotate90deg_Left 0
-#define Rotate90deg_Right 0
-#define Rotate90deg_Up 0
-#define Rotate90deg_Down 0
+// Set the desired rotation for the gyro axes.
+// Valid values: 0 (no rotation), 90 (rotate 90° counterclockwise),
+// -90 (rotate 90° clockwise), 180 (flip both axes)
+#define GYRO_ROTATION_DEG 90
+
 #define GYRO_SENSITIVITY 1    // Sensitivity multiplier for gyro movement
 #define GYRO_DEADZONE_X 0.8    // Deadzone for gyro X-axis
 #define GYRO_DEADZONE_Y 0.8    // Deadzone for gyro Y-axis
@@ -117,7 +116,6 @@ MPU9250 mpu;
 
 void setup() {
   // Safe start condition: Wait for user input to stabilize
-  // Replacing delay with a non-blocking approach
   unsigned long startMillis = millis();
   while (millis() - startMillis < 2000) {
     // Waiting for stabilization
@@ -130,7 +128,8 @@ void setup() {
   Serial.println("Serial initialized successfully");
 
   Serial.println("Waiting for joystick and buttons to stabilize...");
-  while (abs(analogRead(JOYSTICK_LR) - joystickBaselineLR) > JOYSTICK_DEFAULT_DEADZONE * 2 || abs(analogRead(JOYSTICK_UD) - joystickBaselineUD) > JOYSTICK_DEFAULT_DEADZONE * 2) {
+  while (abs(analogRead(JOYSTICK_LR) - joystickBaselineLR) > JOYSTICK_DEFAULT_DEADZONE * 2 ||
+         abs(analogRead(JOYSTICK_UD) - joystickBaselineUD) > JOYSTICK_DEFAULT_DEADZONE * 2) {
     Serial.println("Please ensure the joystick is centered.");
     delay(500);
   }
@@ -369,34 +368,41 @@ void calibrateBaseline() {
 }
 
 void handleIMUMovement() {
-    float deltaX = mpu.getGyroX() - baselineX;
-    float deltaY = mpu.getGyroY() - baselineY;
-    float deltaZ = mpu.getGyroZ() - baselineZ;
+  float deltaX = mpu.getGyroX() - baselineX;
+  float deltaY = mpu.getGyroY() - baselineY;
+  float deltaZ = mpu.getGyroZ() - baselineZ;
 
-    // Apply rotation adjustments
-    if (Rotate90deg_Left) {
-        float temp = deltaX;
-        deltaX = -deltaY;
-        deltaY = temp;
-    } else if (Rotate90deg_Right) {
-        float temp = deltaX;
-        deltaX = deltaY;
-        deltaY = -temp;
-    } else if (Rotate90deg_Up) {
-        deltaY = -deltaY;
-    } else if (Rotate90deg_Down) {
-        deltaX = -deltaX;
+  // Apply rotation adjustments based on GYRO_ROTATION_DEG
+  switch(GYRO_ROTATION_DEG) {
+    case 90: {  // 90° counterclockwise rotation
+      float temp = deltaX;
+      deltaX = -deltaY;
+      deltaY = temp;
+      break;
     }
+    case -90: { // 90° clockwise rotation
+      float temp = deltaX;
+      deltaX = deltaY;
+      deltaY = -temp;
+      break;
+    }
+    case 180: { // 180° rotation (flip both axes)
+      deltaX = -deltaX;
+      deltaY = -deltaY;
+      break;
+    }
+    default: // 0 or unrecognized value: no rotation
+      break;
+  }
 
-    // Apply deadzone
-    if (abs(deltaX) < GYRO_DEADZONE_X) deltaX = 0;
-    if (abs(deltaY) < GYRO_DEADZONE_Y) deltaY = 0;
-    if (abs(deltaZ) < GYRO_DEADZONE_Z) deltaZ = 0;
+  // Apply deadzone
+  if (abs(deltaX) < GYRO_DEADZONE_X) deltaX = 0;
+  if (abs(deltaY) < GYRO_DEADZONE_Y) deltaY = 0;
+  if (abs(deltaZ) < GYRO_DEADZONE_Z) deltaZ = 0;
 
-    // Move mouse based on gyro data
-    int moveX = static_cast<int>(deltaX * GYRO_SENSITIVITY); // Adjust sensitivity as needed
-    int moveY = static_cast<int>(-deltaY * GYRO_SENSITIVITY);
+  // Move mouse based on gyro data
+  int moveX = static_cast<int>(deltaX * GYRO_SENSITIVITY);
+  int moveY = static_cast<int>(-deltaY * GYRO_SENSITIVITY);
 
-    // Move the mouse
-    Mouse.move(moveX, moveY);
+  Mouse.move(moveX, moveY);
 }
